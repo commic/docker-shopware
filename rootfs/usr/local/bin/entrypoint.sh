@@ -9,14 +9,14 @@ then
 	tar --strip 1 -zxf /root/shopware.tar.gz
 	ln -sf /usr/local/bin/composer composer.phar
 
+	unzip -n /root/test_images.zip
+
 	ant -f build/build.xml \
 		-Ddb.user=${MYSQL_USER} \
 		-Ddb.password=${MYSQL_PASSWORD} \
 		-Ddb.name=${MYSQL_DATABASE} \
 		-Ddb.host=${MYSQL_HOST} \
 		build-unit
-
-	unzip -n /root/test_images.zip
 fi
 
 if [ -z $@ ]

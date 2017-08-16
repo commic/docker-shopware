@@ -1,5 +1,5 @@
-FROM jeboehm/shopware:base
-MAINTAINER Jeffrey Boehm <jeffrey.boehm@twt.de>
+FROM commic/shopware:base
+MAINTAINER Michael Weber <micha.bgl@gmx.de>
 
 ENV SHOPWARE_VERSION=5.2.26
 

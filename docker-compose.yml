@@ -11,9 +11,10 @@ services:
       - /var/log
     volumes:
       - data-db:/var/lib/mysql
-
+    ports:
+      - "127.0.0.1:3306:3306"
   shopware:
-    image: jeboehm/shopware:5.2.26
+    image: commic/shopware:5.2.26
     environment:
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
